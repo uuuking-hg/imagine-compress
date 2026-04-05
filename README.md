@@ -1,17 +1,17 @@
-[README.md](https://github.com/user-attachments/files/26486722/README.md)
+[README.md](https://github.com/user-attachments/files/26486741/README.md)
 # Light Image Compressor
-<img width="1161" height="684" alt="屏幕截图 2026-04-05 151359" src="https://github.com/user-attachments/assets/c1573f18-4cc1-4a58-b58d-f269b4c0d46f" />
+<img width="1161" height="684" alt="屏幕截图 2026-04-05 151359" src="https://github.com/user-attachments/assets/e6c03e0d-3792-45e6-843f-ff4e87a5b977" />
 
-一个轻量的 Windows 图片压缩工具。
+轻量的 Windows 图片压缩工具。
 
-选图，填目标大小（KB），导出 JPEG。程序会先尽量通过 JPEG 质量控制体积，不够的话再适当缩小分辨率，目标是把大小压下来，同时别把画质弄得太难看。
+用于将图片压缩到指定大小（KB）。程序优先通过调整 JPEG 质量控制体积；如果仍无法满足目标大小，则进一步缩小分辨率。
 
 ## 功能
 
 - 图形界面
-- 支持拖拽图片
-- 可指定目标大小（KB）
-- 自动中英文界面（跟随系统语言）
+- 支持拖拽导入图片
+- 支持指定目标大小（KB）
+- 界面语言跟随系统，自动切换中英文
 - 单文件实现，无第三方依赖
 
 ## 支持格式
@@ -22,9 +22,9 @@
 输出：
 `jpg`
 
-## 使用
+## 使用方式
 
-1. 选择图片，或者直接拖进窗口
+1. 选择图片，或直接拖入窗口
 2. 输入目标大小（KB）
 3. 确认输出路径
 4. 点击压缩
@@ -37,7 +37,7 @@ g++ transform.cpp -std=c++17 -municode -mwindows -Wall -Wextra -lole32 -loleaut3
 
 ## 说明
 
-- 输出固定为 JPEG
+- 输出格式固定为 JPEG
 - 透明区域会自动铺白底
-- 如果目标太小，可能压不到
-- 核心代码在 `transform.cpp`
+- 目标大小过小时，可能无法达到指定值
+- 核心代码位于 `transform.cpp`
